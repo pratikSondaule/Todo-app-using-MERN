@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URL, {
 }).then(() => {
     console.log("Connected to MongoDB");
 }).catch((err) => {
-    console.error(err);
+    console.error("Error in connecting ", err);
 });
 
 app.use('/todo', todoRoutes);
