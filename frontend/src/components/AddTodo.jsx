@@ -13,7 +13,7 @@ const AddTodo = () => {
     const addTodo = async (e) => {
         e.preventDefault()
 
-        const { data } = await axios.post('http://localhost:8000/todo', { todo: input.todo });
+        const { data } = await axios.post('https://todo-4gan.onrender.com/todo', { todo: input.todo });
         if (data) {
             console.log("Todo added successfully ", data);
             window.location.reload()

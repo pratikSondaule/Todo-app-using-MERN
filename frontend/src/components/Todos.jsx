@@ -14,7 +14,7 @@ const Todos = () => {
     const handleClose = () => setOpen(false);
 
     const fetchTodos = async () => {
-        const { data } = await axios.get('http://localhost:8000/todo')
+        const { data } = await axios.get('https://todo-4gan.onrender.com/todo')
 
         if (data) {
             console.log("Todos fetched successfully ", data);
@@ -25,7 +25,7 @@ const Todos = () => {
     }
 
     const deleteTodo = async (id) => {
-        const { data } = await axios.delete(`http://localhost:8000/todo/delete/${id}`)
+        const { data } = await axios.delete(`https://todo-4gan.onrender.com/todo/delete/${id}`)
         if (data) {
             console.log(data.msg);
             fetchTodos();

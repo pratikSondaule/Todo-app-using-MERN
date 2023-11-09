@@ -12,7 +12,7 @@ const EditTodo = ({ handleClose, todos, fetchTodos }) => {
 
     const editTodo = async (e) => {
         e.preventDefault();
-        const data = await axios.put(`http://localhost:8000/todo/${todos._id}`, { todo: input.todo || '' });
+        const data = await axios.put(`https://todo-4gan.onrender.com/todo/${todos._id}`, { todo: input.todo || '' });
 
         if (data) {
             console.log(data);
