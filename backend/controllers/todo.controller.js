@@ -51,7 +51,6 @@ const deleteTodo = async (req, res) => {
     }
 }
 
-
 const getAllTodos = async (req, res) => {
     try {
         const todos = await TodoModel.find();
